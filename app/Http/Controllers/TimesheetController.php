@@ -82,7 +82,7 @@ class TimesheetController extends Controller
 
     public function edit(Timesheet $timesheet)
     {
-        //
+        return view('pages.timesheets.edit')->with(compact('timesheet'));
     }
 
     public function update(Request $request, Timesheet $timesheet)

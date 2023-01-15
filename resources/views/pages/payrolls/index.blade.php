@@ -243,7 +243,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <a href="print_single" class="btn mb-2 btn-primary">In bảng lương</a>
+                        {{-- <a href="print_single" class="btn mb-2 btn-primary">In bảng lương</a> --}}
                         <button type="button" class="btn mb-2 btn-secondary" data-dismiss="modal">Đóng</button>
                     </div>
                 </div>

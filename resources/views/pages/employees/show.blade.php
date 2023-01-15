@@ -5,7 +5,7 @@
 @section('header', 'Chi tiết hồ sơ nhân viên')
 
 @section('hbuttons')
-    <a href="" class="btn btn-primary">In hồ sơ</a>
+    {{-- <a href="" class="btn btn-primary">In hồ sơ</a> --}}
 @endsection
 
 @section('content')

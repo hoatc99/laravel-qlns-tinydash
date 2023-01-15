@@ -74,7 +74,7 @@
                                                         class="fe fe-calendar fe-16"></span></div>
                                             </div>
                                             <input type="text" class="form-control drgpicker" name="ngay_sinh"
-                                                value="{{ @$employee->date_of_birth }}" aria-describedby="button-addon2"
+                                                value="{{ date('d/m/Y', strtotime(@$employee->date_of_birth)) }}" aria-describedby="button-addon2"
                                                 required>
                                             <div class="invalid-feedback">Vui lòng nhập ngày sinh</div>
                                         </div>
@@ -103,7 +103,7 @@
                                     <div class="col-md-4 mb-3">
                                         <label>Ngày cấp</label>
                                         <input type="text" class="form-control drgpicker" name="ngay_cap"
-                                            value="{{ @$employee->date_of_issue }}" aria-describedby="button-addon2"
+                                            value="{{ date('d/m/Y', strtotime(@$employee->date_of_issue)) }}" aria-describedby="button-addon2"
                                             required>
                                         <div class="invalid-feedback">Vui lòng nhập ngày cấp CCCD</div>
                                     </div>
@@ -139,7 +139,7 @@
                                 <label>Ngày nhận việc</label>
                                 <div class="input-group">
                                     <input type="text" class="form-control drgpicker" name="ngay_nhan_viec"
-                                        value="{{ dmy_system_date(today()) }}" aria-describedby="button-addon2">
+                                        value="{{ date('d/m/Y', strtotime(today())) }}" aria-describedby="button-addon2">
                                 </div>
                             </div>
                         </div>

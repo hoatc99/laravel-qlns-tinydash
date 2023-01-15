@@ -72,11 +72,13 @@
                                             <span class="text-muted sr-only">Action</span>
                                         </button>
                                         <div class="dropdown-menu dropdown-menu-right">
-                                            {{-- @if (!$timesheet->is_closed)
+                                            @if (!$timesheet->is_closed)
+                                                <a class="dropdown-item"
+                                                    href="{{ route('timesheets.edit', $timesheet->id) }}">Sửa bảng công</a>
                                                 <button type="button" class="dropdown-item text-danger" data-toggle="modal"
                                                     data-target="#chotbangcongModal{{ $timesheet->id }}">Chốt bảng
                                                     công</button>
-                                            @endif --}}
+                                            @endif
                                             <button type="button" class="dropdown-item" data-toggle="modal"
                                                 data-target="#xembangcongModal{{ $timesheet->id }}">Xem bảng công</button>
                                         </div>
@@ -187,7 +189,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <a href="print_single" class="btn mb-2 btn-primary">In bảng công</a>
+                        {{-- <a href="print_single" class="btn mb-2 btn-primary">In bảng công</a> --}}
                         <button type="button" class="btn mb-2 btn-secondary" data-dismiss="modal">Đóng</button>
                     </div>
                 </div>

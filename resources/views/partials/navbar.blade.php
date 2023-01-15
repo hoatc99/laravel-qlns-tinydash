@@ -11,7 +11,8 @@
             placeholder="Tìm kiếm..." aria-label="Search">
     </form>
     <ul class="nav">
-        <li class="nav-item my-3 text-muted">{{ date('d/m/Y', strtotime(\App\Models\Setting::first()->virtual_today)) }}</li>
+        <li class="nav-item my-3 text-muted">{{ date('d/m/Y', strtotime(\App\Models\Setting::first()->virtual_today)) }}
+        </li>
         <li class="nav-item">
             <a class="nav-link text-muted my-2" href="" id="modeSwitcher" data-mode="light">
                 <i class="fe fe-sun fe-16"></i>
@@ -39,13 +40,12 @@
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                 <span class="dropdown-item" disabled>{{ $employee->fullname }}</span>
                 <span class="dropdown-item"
-                    disabled>Tên phòng ban</span>
-                <span class="dropdown-item"
-                    disabled>Tên chức vụ</span>
+                    disabled>Quyền: {{ Auth::user()->role }}</span>
                 <hr class="mt-1 mb-2">
-                <a class="dropdown-item" href="#">Thông tin cá nhân</a>
-                <a class="dropdown-item" href="{{ route('settings') }}">Cài đặt</a>
-                <a class="dropdown-item" href="#">Hoạt động</a>
+                <a class="dropdown-item" href="{{ route('employees.show', $employee->id) }}">Thông tin hồ sơ</a>
+                @if (Auth::user()->role == 'admin')
+                    <a class="dropdown-item" href="{{ route('settings') }}">Cài đặt</a>
+                @endif
                 <hr class="mt-1 mb-2">
                 <a class="dropdown-item text-danger" href="{{ route('logout') }}">Đăng xuất</a>
             </div>

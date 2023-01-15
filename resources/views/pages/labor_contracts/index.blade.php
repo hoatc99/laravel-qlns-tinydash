@@ -5,7 +5,7 @@
 @section('header', 'Quản lý hợp đồng lao động')
 
 @section('hbuttons')
-    <a href="{{ route('employees.create') }}" class="btn btn-primary">Tạo hợp đồng</a>
+    <a href="{{ route('labor-contracts.create') }}" class="btn btn-primary">Tạo hợp đồng</a>
 @endsection
 
 @section('content')
